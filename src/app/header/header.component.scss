@@ -1,0 +1,15 @@
+ul.nav.navbar-dark.bg-dark{
+  border-radius: 20px 20px;
+  padding: 4px;
+  // font-weight: bold;
+}
+
+a.nav-link{
+  color: rgb(236, 42, 42);
+
+  &:hover{
+    background-color: grey;
+    border-radius: 20px 20px;
+    color: black;
+  }
+}
