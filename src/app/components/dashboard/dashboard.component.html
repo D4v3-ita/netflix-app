@@ -1,1 +1,8 @@
-<p>dashboard works!</p>
+<div *ngFor="let film of films">
+  <div>
+    <!-- PER VEDERE I TITOLI DEI FILM -->
+    {{film.title}}
+    <!-- PER VEDERE ANCHE LE COPERTINE -->
+    <!-- <img src={{film.cover_url}}> -->
+  </div>
+</div>

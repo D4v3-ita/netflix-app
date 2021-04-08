@@ -9,24 +9,16 @@ export class FilmServiceService {
   loginUrl = 'https://netflix.cristiancarrino.com/film/read.php';
 
   httpOptions = {
-    headers: new HttpHeaders({'Content-type':'application/json'})
+    headers: new HttpHeaders({'Content-Type':'application/json'})
   }
 
   constructor(private http: HttpClient) { }
 
-  // getFilms(loginUrl: string, httpOptions: HttpHeaders): Observable<[]>{
-  //   return this.http.get(this.loginUrl, {
-  //     username: username,
-  //     password: password
-  //   }, this.httpOptions).pipe(tap(response => {
-  //     console.log('login: ', response);
-  //     this.loggedUser = response;
-  //     }),catchError(error => {
-  //       console.log(error);
-  //       this.loggedUser=null;
-  //       return of(null);
-  //     })
-  //   );
-  // }
+  // creiamo una funzione getFilms che restituirà un Observable di array di any
+  getFilms(): Observable<any[]>{
+    // gli stiamo dicendo di stampare in formato array di any ciò che si trova all'interno
+    // di loginUrl (il link che lo collega direttamente alla lista di film online)
+    return this.http.get<any[]>(this.loginUrl, this.httpOptions);
+  }
 
 }
