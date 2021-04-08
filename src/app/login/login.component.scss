@@ -1,0 +1,13 @@
+.form-control{
+  background-color: rgb(71, 67, 67);
+  color: red;
+}
+
+.form-control:focus{
+  background-color: rgb(71, 67, 67);
+  color: white;
+}
+
+::-webkit-input-placeholder{
+  color: white;
+}
