@@ -1,8 +1,18 @@
 <div *ngFor="let film of films">
   <div>
-    <!-- PER VEDERE I TITOLI DEI FILM -->
-    {{film.title}}
-    <!-- PER VEDERE ANCHE LE COPERTINE -->
-    <!-- <img src={{film.cover_url}}> -->
+    <table align="center" class="tabellafilm">
+      <td class="cellafilm">
+        <!-- PER VEDERE I TITOLI DEI FILM -->
+        <span class="titolofilm"><b>
+          {{film.title}}
+        </b></span>
+      </td>
+      <td class="cellafilm">
+        <!-- PER VEDERE ANCHE LE COPERTINE -->
+        <img src={{film.cover_url}} class="imgtabfilm">
+      </td>
+    </table>
+
+
   </div>
 </div>

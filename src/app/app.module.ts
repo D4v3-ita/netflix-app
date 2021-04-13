@@ -10,6 +10,8 @@ import { FilmListComponent } from './film-list/film-list.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { NgxLocalStorageModule, NGX_LOCAL_STORAGE_SERIALIZER } from 'ngx-localstorage';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxLocalStorageModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
