@@ -1,7 +1,6 @@
 ul.nav.navbar-dark.bg-dark{
   border-radius: 20px 20px;
   padding: 4px;
-  // font-weight: bold;
 }
 
 a.nav-link{
@@ -11,5 +10,7 @@ a.nav-link{
     background-color: grey;
     border-radius: 20px 20px;
     color: white;
+    cursor: pointer;
   }
 }
+

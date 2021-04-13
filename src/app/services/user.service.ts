@@ -3,12 +3,13 @@ import { Observable, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { tap, catchError } from 'rxjs/operators';
 import { LocalStorageService } from 'ngx-localstorage';
+import { User } from '../models/user';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  loggedUser: any = null;
+  loggedUser: User|null = null;
 
   loginUrl = 'https://netflix.cristiancarrino.com/user/login.php';
 
@@ -21,8 +22,8 @@ export class UserService {
     private localStorage: LocalStorageService
     ) { }
 
-  login(username: string, password: string, rememberMe: boolean): Observable<any>{
-    return this.http.post(this.loginUrl, {
+  login(username: string, password: string, rememberMe: boolean): Observable<User|null>{
+    return this.http.post<User|null>(this.loginUrl, {
       username: username,
       password: password
     }, this.httpOptions).pipe(tap(response => {
@@ -45,5 +46,15 @@ export class UserService {
         return of(null);
       })
     );
+  }
+
+  getLoggedUser(): User|null{
+    this.loggedUser = this.localStorage.get('loggedUser');
+    return this.loggedUser;
+  }
+
+  logout(){
+    this.localStorage.remove('loggedUser');
+    this.loggedUser = null;
   }
 }

@@ -5,6 +5,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { FilmListComponent } from './film-list/film-list.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { AddFilmComponent } from './components/add-film/add-film.component';
+import { AddActorComponent } from './components/add-actor/add-actor.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -13,6 +15,8 @@ const routes: Routes = [
   { path: 'footer', component: FooterComponent },
   { path: 'film-list', component: FilmListComponent },
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'add-film', component: AddFilmComponent },
+  { path: 'add-actor', component: AddActorComponent },
   // { path: 'detail/:id', component: HeroDetailComponent },
 ];
 

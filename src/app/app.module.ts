@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NgxLocalStorageModule, NGX_LOCAL_STORAGE_SERIALIZER } from 'ngx-localstorage';
+import { AddFilmComponent } from './components/add-film/add-film.component';
+import { AddActorComponent } from './components/add-actor/add-actor.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { NgxLocalStorageModule, NGX_LOCAL_STORAGE_SERIALIZER } from 'ngx-localst
     FooterComponent,
     LoginComponent,
     FilmListComponent,
-    DashboardComponent
+    DashboardComponent,
+    AddFilmComponent,
+    AddActorComponent
   ],
   imports: [
     BrowserModule,
